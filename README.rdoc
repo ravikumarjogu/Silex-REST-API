@@ -1,17 +1,20 @@
-# Silex-REST-API
+= Silex-REST-API
 Restful architecture for silex php framework and resources being used as another api from heroku.
 
-## Used
+== Used
 * API resource: herokuApp[https://basic-rails-api.herokuapp.com/api/v1]
-* Silex framework[https://github.com/silexphp/Silex]
+* Silex-framework[https://github.com/silexphp/Silex]
 * Guzzlehttp[https://github.com/guzzle/guzzle]
 
-### Silex framework:
-#### Install Silex framework:
+=== Silex framework:
+==== Install Silex framework:
 * Install composer.phar, checkout here[https://www.digitalocean.com/community/tutorials/how-to-get-started-with-silex-on-ubuntu-14-04]
 
-### Running
-* Run apache2 <code>$ sudo service apache2 start</code>
-(if nginx runnning default stop using <code>$sudo service nginx stop</code>)
+=== Running
+    * Run apache2 
+    $ sudo service apache2 start
+    
+    if nginx runnning default stop using
+    $sudo service nginx stop
 
 Open[http://localhost/] in your browser.
