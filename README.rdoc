@@ -8,7 +8,34 @@ Restful architecture for silex php framework and resources being used as another
 
 === Silex framework:
 ==== Install Silex framework:
-* Install composer.phar, checkout here[https://www.digitalocean.com/community/tutorials/how-to-get-started-with-silex-on-ubuntu-14-04]
+* Install step by step, can be seen here[https://www.digitalocean.com/community/tutorials/how-to-get-started-with-silex-on-ubuntu-14-04]
+
+=== Includes
+RESTful architecure simplifies the routes for given resources for ex: users
+
+CRUD operations performed on the users resources by defining the following routes in <code>./index.php</code>.
+
+Silex provides the smooth way to do this.
+
+Need routes:
+
+   METHOD[action] url
+
+   GET localhost/
+   GET[index] localhost/users
+   GET[new] localhost/users/new
+   POST[create] localhost/users
+   GET[show] localhost/users/{id}
+   GET[edit] localhost/users/{id}/edit
+   PUT[update] localhost/users/{id}
+   DELETE[destroy] localhost/users/{id}
+Silex framework style:
+   Sample:
+   $app->get('/', function (Silex\Application $app)  {
+   return "String or Collection" or "render some page";
+   });
+   
+   REST routes can be found in <code>./index.php</code>
 
 === Running
     * Run apache2 
@@ -18,3 +45,11 @@ Restful architecture for silex php framework and resources being used as another
     $sudo service nginx stop
 
 Open[http://localhost/] in your browser.
+
+=== Alternatives
+Can be found here[http://www.gajotres.net/best-available-php-restful-micro-frameworks/]
+=== References
+* Silex[https://silex.readthedocs.org/en/stable/usage.html#example-get-route]
+* Guzzlehttp[http://docs.guzzlephp.org/en/latest/]
+* Digitalocean[https://www.digitalocean.com/]
+* Stackoverflow
