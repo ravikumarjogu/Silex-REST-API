@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 {% block body %}
     <h1>
-        Blog: New User
+        Blog: {{user.name}} : Edit
     </h1>
 
     <form class="col-md-6" action="{{ app.url_generator.generate('user', { id: id }) }}" method="POST">
