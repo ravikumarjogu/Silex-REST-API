@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>
+        Blog: New User
+    </h1>
+
+    <form class="col-md-6" action="{{ app.url_generator.generate('user', { id: id }) }}" method="POST">
+    	 <input type="hidden"  id="_method"  name='_method' value="put">
+        <label>Name:</label>
+    	<input name="name" type="text" minlength="4" class="form-control" value={{user.name}} required></input>
+    	<label>Email:</label>
+    	<input name="email" type="email"class="form-control" value={{user.email}} required></input>
+    	<label>Password:</label>(Ignore if you dont want to change)
+    	<input name="password" type="password"class="form-control"></input>
+    	<label>Password confirmation:</label>
+    	<input name="password_confirmation" type="password"class="form-control"> </input>
+    	<label></label>
+    	<input type="submit" class="btn btn-success"></input>
+    </form>
+
+{% endblock %}
+
+

@@ -1,0 +1,9 @@
+{
+	"require": {
+        	"silex/silex": "~1.2",
+			"twig/twig": ">=1.8,<2.0-dev",
+			"fredjuvaux/doctrine-orm-provider":"1.0.x-dev",
+			"doctrine/dbal":"~2.2",
+			"guzzlehttp/guzzle":"6.1.1"
+	}
+}

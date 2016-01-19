@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>
+        Blog: All Users
+    </h1>
+
+    <a href="/users/new"><button class="btn btn-primary" >Add new user</button></a>
+    <table class="table">
+    {% for i in 0..max-1 %}
+        <tr>
+        <td><a href="{{ app.url_generator.generate('user', { id: users[i].id }) }}">{{users[i].name}}</a></td>
+        <td>{{users[i].email}}</td>
+        <td><a href="{{ app.url_generator.generate('user', { id: users[i].id }) }}/edit"><button class="btn btn-info">Edit</button></a></td>
+        <td>
+
+   
+            </td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}
+
+

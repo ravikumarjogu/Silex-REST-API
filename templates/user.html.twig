@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>
+        Blog: {{user.name}}
+    </h1>
+     <span><a>{{user.name}}</a>:{{user.email}}</span><br>
+     <a href="{{ app.url_generator.generate('user', { id: id }) }}/edit"><button class="btn btn-info">Edit</button></a>
+
+     
+     <form role="form" action="/users/{{id}}" method="post" style="display:inline">
+             <input type="hidden" id="_method" name='_method' value="delete">
+             <input type="submit" value="Delete" class="btn btn-danger">
+        </form>
+     <p><a href="{{ app.url_generator.generate('users') }}">Back to users</a></p>
+{% endblock %}
+
+
