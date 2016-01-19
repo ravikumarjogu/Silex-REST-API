@@ -45,7 +45,8 @@ Silex framework style:
     $sudo service nginx stop
 
 Open[http://localhost/] in your browser.
-
+=== why
+* A sample app for Silex how to build REST routes and integration with API.
 === Alternatives
 Can be found here[http://www.gajotres.net/best-available-php-restful-micro-frameworks/]
 === References
